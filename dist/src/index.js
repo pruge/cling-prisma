@@ -1,13 +1,35 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getPrisma = void 0;
-const client_1 = require("../prisma/client");
-let prisma;
-const getPrisma = () => {
-    if (!prisma) {
-        prisma = new client_1.PrismaClient();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
-    return prisma;
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
-exports.getPrisma = getPrisma;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.prisma = void 0;
+const client_1 = require("../prisma/client");
+// let prisma: PrismaClient | undefined
+// export const getPrisma = () => {
+//   if (!prisma) {
+//     prisma = new PrismaClient()
+//   }
+//   return prisma
+// }
+const prismaClientSingleton = () => {
+    return new client_1.PrismaClient();
+};
+exports.prisma = globalThis.prismaGlobal ?? prismaClientSingleton();
+if (process.env.NODE_ENV !== 'production')
+    globalThis.prismaGlobal = exports.prisma;
+// export * from '../prisma/client'
+__exportStar(require("../prisma/client"), exports);
+__exportStar(require("../prisma/zod"), exports);
 //# sourceMappingURL=index.js.map
