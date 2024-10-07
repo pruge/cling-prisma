@@ -1,0 +1,1 @@
+{"version":3,"file":"ProductDeleteManyArgsSchema.js","sourceRoot":"","sources":["../../../../prisma/zod/outputTypeSchemas/ProductDeleteManyArgsSchema.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AAExB,yFAAqF;AAExE,QAAA,2BAA2B,GAA4C,OAAC,CAAC,MAAM,CAAC;IAC3F,KAAK,EAAE,iDAAuB,CAAC,QAAQ,EAAE;CAC1C,CAAC,CAAC,MAAM,EAAE,CAAE;AAEb,kBAAe,mCAA2B,CAAC"}

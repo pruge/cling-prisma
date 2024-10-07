@@ -1,0 +1,1 @@
+{"version":3,"file":"MemberActivitySchema.js","sourceRoot":"","sources":["../../../../prisma/zod/modelSchema/MemberActivitySchema.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AAExB,yCAAyC;AACzC,yBAAyB;AACzB,yCAAyC;AAE5B,QAAA,oBAAoB,GAAG,OAAC,CAAC,MAAM,CAAC;IAC3C,EAAE,EAAE,OAAC,CAAC,MAAM,EAAE;IACd,MAAM,EAAE,OAAC,CAAC,MAAM,EAAE;CACnB,CAAC,CAAA;AAIF,kBAAe,4BAAoB,CAAC"}

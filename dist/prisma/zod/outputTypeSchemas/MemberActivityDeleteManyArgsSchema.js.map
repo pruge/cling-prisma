@@ -1,0 +1,1 @@
+{"version":3,"file":"MemberActivityDeleteManyArgsSchema.js","sourceRoot":"","sources":["../../../../prisma/zod/outputTypeSchemas/MemberActivityDeleteManyArgsSchema.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AAExB,uGAAmG;AAEtF,QAAA,kCAAkC,GAAmD,OAAC,CAAC,MAAM,CAAC;IACzG,KAAK,EAAE,+DAA8B,CAAC,QAAQ,EAAE;CACjD,CAAC,CAAC,MAAM,EAAE,CAAE;AAEb,kBAAe,0CAAkC,CAAC"}

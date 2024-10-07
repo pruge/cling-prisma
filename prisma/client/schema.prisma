@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "client"
+}
+
+generator zod {
+  provider         = "zod-prisma-types"
+  output           = "zod"
+  prismaClientPath = "../../client"
+  useMultipleFiles = true
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Member {
+  id    String @id @unique
+  name  String
+  email String @unique
+  tag   String
+  role  Role   @default(guest)
+
+  MemberActivity MemberActivity[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model MemberActivity {
+  id String @id @default(uuid(7)) @db.Uuid
+
+  userId String
+  user   Member @relation(fields: [userId], references: [id])
+}
+
+model Product {
+  id        String @id @default(uuid(7)) @db.Uuid
+  name      String
+  tag       String @unique
+  variable  String @default("[]")
+  installed String @default("[]")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  admin  @map("admin")
+  member @map("member")
+  guest  @map("guest")
+}
