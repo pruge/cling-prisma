@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "./dist/src/index.js",
-  "scripts": {
-    "postinstall": "npx prisma generate && tsc"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "devDependencies": {
